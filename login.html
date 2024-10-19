@@ -1,0 +1,41 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #div01 {
+            align-items: center;
+            background-color: lightblue;
+            padding: 20px;
+        }
+        #b1 {
+            background-color: red;
+        }
+    </style>
+    <title>Login</title>
+</head>
+<body>
+    <form  method="post"  action="login2.php">
+        <div id="div01">
+            <h1 align="center">Login here...</h1>
+            <br>
+            <h3>Enter your Email ID:
+                <input type="email" name="email" id="email" required>
+            </h3>
+            <br>
+            <h3>Enter Your Password:
+                <input type="password" name="password" id="password" required>
+            </h3>
+            <br>
+            <input type="submit" id="b1" name="s1">
+            <br>
+            <h3 align="center">OR</h3>
+            <br>
+            <input type="button" onclick="window.location.href='signup.html'" value="Signup" id="signup">
+        </div>
+    </form>
+   </body>
+
+
+</html>

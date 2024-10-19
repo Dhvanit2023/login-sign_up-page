@@ -1,0 +1,98 @@
+<html>
+
+    <head>
+        <title>Signup</title>
+    </head>
+    <style>
+                body{
+            background-color: blue;
+        }
+        .div01{
+            margin: auto;
+            box-align: center;
+            background-color: white;
+            width: 500px;
+            height: 500px;
+            border-radius: 20px;
+            
+        }
+        #h1{
+            text-align: center;
+            text-decoration: underline;
+        }
+    
+        #email{
+            width: 200px;
+            height: 25px;
+            margin: auto;
+            display: block;
+           
+        }
+        #password{
+            margin-top: 5px;
+            width: 200px;
+            height: 25px;
+            margin: auto;
+            display: block;
+        }
+        
+        #confirm_password{
+            margin-top: 5px;
+            width: 200px;
+            height: 25px;
+            margin: auto;
+            display: block;
+        }
+        #Signup{
+            margin: auto;
+            display: block;
+            width: 90px;
+            height: 25px;
+            background-color: yellow;
+        }
+        #login{
+            margin: auto;
+            display: block;
+            width: 90px;
+            height: 25px;
+        background-color: blue;
+        }
+    </style>
+    <body>
+        <form method="post" action="Signup.php" onsubmit="return validateForm()">
+            <div class="div01">
+                <h1 id="h1">Signup...</h1>
+                <div><input type="email" id="email" name="email" placeholder="Email" required></div>
+                <br>
+                <div><input type="password" id="password" name="password" placeholder="Password" required></div>
+                <br>
+                <div><input type="password" id="confirm_password" name="confirm_password" placeholder="Confirm Password" required></div>
+                <br>
+                <input type="submit" id="Signup" value="Signup" name="Signup">
+                <br>
+                <h3 align="center">OR</h3>
+                <br>
+                <input type="button" onclick="window.location.href='login.html'" value="Login" id="login" name="login">
+            </div>
+        </form>
+        <script>
+            function validateForm() {
+               // event.preventDefault();
+                const password = document.getElementById("password").value;
+                const confirmPassword = document.getElementById("confirm_password").value;
+                
+                if (password !== confirmPassword) {
+                    alert("Please check your password and confirm password.");
+                    return false;
+                }
+                alert("Signup successful! You can now log in.");
+                return true;
+    
+                
+            }
+        </script>
+    </body>
+    
+    </html>
+    
+</html>
